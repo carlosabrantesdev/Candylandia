@@ -64,7 +64,7 @@ function Form() {
         if (usuario) {
           localStorage.setItem('id', usuario.id);
           context.setUser({ user: usuario.user, id: usuario.id });
-          navigate('/vitrine');
+          navigate('/Candylandia/vitrine');
         } else {
           setPopup({ texto: 'Usuário ou senha incorretos', cor: 'vermelho' })
           fecharPopup();

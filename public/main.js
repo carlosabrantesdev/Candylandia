@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ import Form from "./routes/Form";
 import NaoEncontrado from "./routes/NaoEncontrado";
 import AppContext from './context/AppContext';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
     <AppContext>
       <HashRouter>
@@ -25,5 +25,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Routes>
       </HashRouter>
     </AppContext>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

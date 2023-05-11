@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import { HashRouter, Routes, Route } from 'react-router-dom';
-
-import Home from "./routes/Home";
-import Vitrine from "./routes/Vitrine";
-import Detalhes from "./routes/Detalhes";
-import Sobre from "./routes/Sobre";
-import Form from "./routes/Form";
-import NaoEncontrado from "./routes/NaoEncontrado";
+import Home from './routes/Home';
+import Vitrine from './routes/Vitrine';
+import Detalhes from './routes/Detalhes';
+import Sobre from './routes/Sobre';
+import Form from './routes/Form';
+import NaoEncontrado from './routes/NaoEncontrado';
 import AppContext from './context/AppContext';
 
 ReactDOM.render(

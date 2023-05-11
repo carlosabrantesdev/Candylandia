@@ -16,11 +16,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AppContext>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/vitrine" element={<Vitrine />} />
-          <Route path="/detalhes/:id" element={<Detalhes />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/form" element={<Form />} />
+          <Route path="/Candylandia" element={<Home />} />
+          <Route path="/Candylandia/vitrine" element={<Vitrine />} />
+          <Route path="/Candylandia/detalhes/:id" element={<Detalhes />} />
+          <Route path="/Candylandia/sobre" element={<Sobre />} />
+          <Route path="/Candylandia/form" element={<Form />} />
           <Route path="*" element={<NaoEncontrado />} />
         </Routes>
       </HashRouter>

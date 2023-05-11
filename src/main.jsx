@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from "./routes/Home";
 import Vitrine from "./routes/Vitrine";
@@ -14,7 +14,7 @@ import AppContext from './context/AppContext';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AppContext>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/Candylandia" element={<Home />} />
           <Route path="/Candylandia/vitrine" element={<Vitrine />} />
@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/Candylandia/form" element={<Form />} />
           <Route path="*" element={<NaoEncontrado />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </AppContext>
   </React.StrictMode>
 );

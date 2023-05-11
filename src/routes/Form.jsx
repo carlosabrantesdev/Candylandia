@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useContext, useRef, useState } from "react";
 import axios from 'axios';
 import { MyContext } from "../context/AppContext";
+import { useNavigate } from 'react-router-dom';
 
 function Form() {
   const [LoginForm, setLoginForm] = useState(true);
@@ -11,7 +12,8 @@ function Form() {
   const [senha, setSenha] = useState('');
   const [popup, setPopup] = useState({ texto: "", cor: "verde" });
   const context = useContext(MyContext);
-  const termosDeUso = useRef(null)
+  const termosDeUso = useRef(null);
+  const navigate = useNavigate();
 
   if (LoginForm) { document.title = "Entrar" } else { document.title = "Cadastrar-se" }
 
@@ -62,7 +64,7 @@ function Form() {
         if (usuario) {
           localStorage.setItem('id', usuario.id);
           context.setUser({ user: usuario.user, id: usuario.id });
-          window.location.href = window.location.pathname + 'vitrine';
+          navigate('/vitrine');
         } else {
           setPopup({ texto: 'Usuário ou senha incorretos', cor: 'vermelho' })
           fecharPopup();

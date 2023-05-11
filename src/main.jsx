@@ -14,7 +14,7 @@ import AppContext from './context/AppContext';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AppContext>
-      <HashRouter basename="/Candylandia">
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vitrine" element={<Vitrine />} />

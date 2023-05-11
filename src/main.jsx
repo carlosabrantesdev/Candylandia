@@ -17,6 +17,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vitrine" element={<Vitrine />} />
+          <Route path="/Candylandia/vitrine" element={<Vitrine />} />
           <Route path="/detalhes/:id" element={<Detalhes />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/form" element={<Form />} />

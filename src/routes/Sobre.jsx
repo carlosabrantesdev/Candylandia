@@ -77,7 +77,7 @@ class Sobre extends React.Component {
         <Link to="/vitrine"><div css={voltar}></div></Link>
         <div css={logo}><img src="https://i.ibb.co/j38gqmK/logo-galileo-2x.png" alt="" /></div>
         <div css={estilo}>
-          <img src="/foto.png" alt="" />
+          <img src="../foto.png" alt="" />
           <div>
             <h1>Olá, me chamo Carlos Henrique Duarte Abrantes</h1>
             <p>E graças ao Projeto Galileo, eu dei ínicio a minha jornada no Front End, o curso em si é ótimo e tem os melhores professores. Durante o projeto eu consegui ter conhecimento de: HTML, CSS, Javascript e React. Candylandia para mim é um projeto que me abriu portas ao React.</p>

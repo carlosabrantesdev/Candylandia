@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useContext, useRef, useState } from "react";
 import axios from 'axios';
 import { MyContext } from "../context/AppContext";
-import { useNavigate } from 'react-router-dom';
 
 function Form() {
   const [LoginForm, setLoginForm] = useState(true);
@@ -12,8 +11,7 @@ function Form() {
   const [senha, setSenha] = useState('');
   const [popup, setPopup] = useState({ texto: "", cor: "verde" });
   const context = useContext(MyContext);
-  const termosDeUso = useRef(null);
-  const navigate = useNavigate();
+  const termosDeUso = useRef(null)
 
   if (LoginForm) { document.title = "Entrar" } else { document.title = "Cadastrar-se" }
 
@@ -64,7 +62,7 @@ function Form() {
         if (usuario) {
           localStorage.setItem('id', usuario.id);
           context.setUser({ user: usuario.user, id: usuario.id });
-          navigate('/Candylandia/vitrine');
+          window.location.href = '/Candylandia/vitrine#/vitrine';
         } else {
           setPopup({ texto: 'Usuário ou senha incorretos', cor: 'vermelho' })
           fecharPopup();

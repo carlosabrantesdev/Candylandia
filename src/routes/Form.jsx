@@ -43,6 +43,8 @@ function Form() {
 
     setPopup({ texto: 'Email Cadastrado!', cor: 'verde' })
     fecharPopup();
+
+    Submit()
   }
 
   function fecharPopup() {
@@ -56,7 +58,7 @@ function Form() {
   };
 
   const fazerLogin = () => {
-    axios.get('https://63069afec0d0f2b8011f9944.mockapi.io/cadastro')
+    axios.get('https://646bacd47d3c1cae4ce4238b.mockapi.io/credenciais')
       .then((response) => {
         const usuario = response.data.find((item) => item.user === user && item.senha === senha);
         if (usuario) {
@@ -77,7 +79,7 @@ function Form() {
 
   const Submit = () => {
 
-    axios.post('https://63069afec0d0f2b8011f9944.mockapi.io/cadastro', {
+    axios.post('https://646bacd47d3c1cae4ce4238b.mockapi.io/credenciais', {
       email,
       user,
       senha,

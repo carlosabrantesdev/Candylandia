@@ -3,5 +3,5 @@ import reactRefresh from '@vitejs/plugin-react';
 
 export default defineConfig({
   base: '/Candylandia/',
-  plugins: [react()],
+  plugins: [reactRefresh()],
 });

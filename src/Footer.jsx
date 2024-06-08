@@ -10,7 +10,7 @@ function Footer() {
       <p>&copy; 2023 Candylandia</p>
       <form className="email">
         <label htmlFor="email">Inscreva-se para receber novidades por e-mail:</label>
-        <input type="email" placeholder="Seu email vem aqui"/>
+        <input type="email" placeholder="Insira seu email aqui"/>
         <button type="submit" id='botaosubmit'>Inscreva-se</button>
       </form>
     </div>
@@ -22,7 +22,7 @@ function Footer() {
         <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/640px-Facebook_icon_2013.svg.png" alt="" /></a></li>
       </ul>
      </div>
-     <a href="https://api.whatsapp.com/send?phone=84996845592" className="whatsapp" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png" alt="" /></a>
+     <a href="https://api.whatsapp.com/send?phone=8499605199" className="whatsapp" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png" alt="" /></a>
     </div>
   </footer>
   );

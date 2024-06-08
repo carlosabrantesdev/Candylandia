@@ -3,20 +3,19 @@ import { useParams } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer'
 import "../main.css";
+import produtosDados from './produtos.json';
 
 function Detalhes() {
   const { id } = useParams();
   const [produto, setProduto] = useState(null);
   const [contador, setContador] = useState(1);
-
-  document.title = produto?.nome || "Detalhes"
+  const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    fetch(`https://63069afec0d0f2b8011f9944.mockapi.io/produtos/${id}`)
-      .then(resposta => resposta.json())
-      .then(info => {
-        setProduto(info);
-      });
+    const produtoEncontrado = produtosDados.find(produto => produto.id.toString() === id);
+    setProduto(produtoEncontrado);
+    setCarregando(false);
+    document.title = produtoEncontrado?.nome || "Detalhes";
   }, [id]);
 
   const mais = () => {
@@ -30,7 +29,18 @@ function Detalhes() {
   }
 
   const mudarFoto = (src) => {
-    document.getElementById('foto').src = src;
+    const fotoElement = document.getElementById('foto');
+    if (fotoElement) {
+      fotoElement.src = src;
+    }
+  }
+
+  if (carregando) {
+    return <div>Carregando...</div>;
+  }
+
+  if (!produto) {
+    return <div>Nenhum produto encontrado com o ID {id}.</div>;
   }
 
   return (
@@ -38,15 +48,15 @@ function Detalhes() {
       <Header />
       <div className='produto'>
         <div className='fotos'>
-          <img src={produto?.imagem} alt="" onClick={() => mudarFoto(produto?.imagem)} />
-          <img src={produto?.imagem2} alt="" onClick={() => mudarFoto(produto?.imagem2)} />
+          <img src={produto.imagem} alt="" onClick={() => mudarFoto(produto.imagem)} />
+          <img src={produto.imagem2} alt="" onClick={() => mudarFoto(produto.imagem2)} />
         </div>
-        <img src={produto?.imagem} alt="" id='foto' />
+        <img src={produto.imagem} alt="" id='foto' />
         <div className='principal'>
-          <span>⭐{produto?.estrelas}</span>
-          <h1>{produto?.nome}</h1>
+          <span>⭐{produto.estrelas}</span>
+          <h1>{produto.nome}</h1>
           <div className='preco'>
-            <p>R${produto?.preco}</p>
+            <p>R${produto.preco}</p>
             <div id='quantidade'>
               <div id='menos' onClick={menos}>-</div>
               <div id='atual'>{contador}</div>
@@ -59,7 +69,7 @@ function Detalhes() {
           </button>
         </div>
       </div>
-      <div className='descricao'><h2>Descrição:</h2>{produto?.descricao}</div>
+      <div className='descricao'><h2>Descrição:</h2>{produto.descricao}</div>
       <Footer />
     </div>
   );

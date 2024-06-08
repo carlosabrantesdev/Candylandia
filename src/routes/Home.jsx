@@ -33,7 +33,7 @@ function Home() {
         <h1 className="logo">Candylandia</h1>
         <p id="subtitulo">Um mundo mágico de sabores doces espera por você aqui!</p>
         <p id="texto">Com anos de experiência no mercado, a Candylandia tem o compromisso de fornecer produtos de alta qualidade para seus clientes, sempre com um excelente atendimento e preços justos.</p>
-        <img src="https://womenshealthbrasil.com.br/wp-content/uploads/sites/6/2018/06/vontade-de-comer-doce.jpg" alt="" />
+        <img src="https://i.ibb.co/h8yhw4r/como-montar-uma-loja-de-doces.jpg" alt="" />
         <p id="texto">Nosso foco é oferecer produtos de qualidade, por isso, todos os nossos produtos passam por rigorosos controles de qualidade antes de chegar às prateleiras.</p>
         <Link to="/vitrine" onClick={animacao}>
           <div

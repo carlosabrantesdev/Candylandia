@@ -18,8 +18,8 @@ function Card(props) {
 
   return (
     <Link to={`/detalhes/${props.id}`}>
-      <div className='card' onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}  onClick={ButtonClick}>
-        <img src={props.imagem}/>
+      <div className='card' onMouseEnter={MouseEnter} onMouseLeave={MouseLeave} onClick={ButtonClick}>
+        <img src={props.imagem} alt={props.nome}/>
         <h1>{props.nome}</h1>
         <p>⭐{props.estrelas}</p>
         <button>{preco}</button>

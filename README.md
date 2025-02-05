@@ -4,6 +4,6 @@ Link que redireciona para o site: https://carlosabrantesdev.github.io/Candylandi
 <h2>Página inicial</h2>
 <img src="https://github.com/user-attachments/assets/e951e5ea-9ba2-4c3d-bb24-4deeed919565" alt="Text">
 <h2>Vitrine da loja</h2>
-<img src="https://github.com/user-attachments/assets/e951e5ea-9ba2-4c3d-bb24-4deeed919565" alt="Text">
+<img src="https://github.com/user-attachments/assets/3a0cbfdd-035d-4c83-b44e-52e2536d2643" alt="Text">
 <h2>Área de autenticação</h2>
 <img src="https://github.com/user-attachments/assets/69efe552-40f1-4824-af9a-89e080cecd4e" alt="Text">
